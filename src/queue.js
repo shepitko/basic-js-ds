@@ -27,9 +27,12 @@ class Queue {
       value,
       next: null,
     }
-    if (this.queue === null) this.queue = node;
-    else {
+
+    if (this.queue === null) {
+      this.queue = node;
+    } else {
       let lastNode = this.queue;
+
       while (true) {
         if (lastNode.next !== null) {
           lastNode = lastNode.next;
